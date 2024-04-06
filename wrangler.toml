@@ -5,7 +5,3 @@ main = "src/index.ts"
 
 [site]
 bucket = "./assets"
-
-[[r2_buckets]]
-binding = 'storage' # <~ valid JavaScript variable name
-bucket_name = 'store'

@@ -10,8 +10,8 @@
     "wrangler": "^3.17.1"
   },
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy src/index.ts"
+    "dev": "npx wrangler dev src/index.ts",
+    "deploy": "npx wrangler deploy --minify ./src/index.ts"
   },
   "repository": {
     "type": "git",

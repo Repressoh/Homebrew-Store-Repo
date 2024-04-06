@@ -1,6 +1,6 @@
 {
   "name": "homebrew-ps4-store",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": " Create your Own Homebrew Store repo",
   "main": "src/index.ts",
   "dependencies": {
@@ -8,6 +8,10 @@
   },
   "devDependencies": {
     "wrangler": "^3.17.1"
+  },
+  "browser": {
+    "crypto": false,
+    "stream": false
   },
   "scripts": {
     "dev": "npx wrangler dev src/index.ts",

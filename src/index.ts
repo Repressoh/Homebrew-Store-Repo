@@ -6,11 +6,8 @@ import { md5 } from "hono/utils/crypto";
 const app = new Hono()
 
 app.get('/store.db', async (c) => {
-    const res = await fetch(`https://store-cdn.repressoh.it/store.db`)
-    const file = await res.text()
-
     c.header('Content-Type', 'application/x-sqlite3')
-    return c.newResponse(file)
+    return c.redirect("https://store-cdn.repressoh.it/store.db")
 })
 
 

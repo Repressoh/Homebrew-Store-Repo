@@ -1,15 +1,19 @@
 import { Hono } from 'hono'
 import { serveStatic } from 'hono/cloudflare-workers'
-import { md5 } from "hono/utils/crypto";
-
 
 const app = new Hono()
 
 app.get('/store.db', async (c) => {
-    c.header('Content-Type', 'application/x-sqlite3')
-    return c.redirect("https://store-cdn.repressoh.it/store.db")
-})
+    const response = await fetch('https://store-cdn.repressoh.it/store.db');
+    const fileData = await response.arrayBuffer()
 
+    return new Response(fileData, {
+        headers: {
+            'Content-Type': 'application/x-sqlite3',
+            'Content-Disposition': 'attachment; filename="store.db"'
+        }
+    })
+})
 
 app.get('/update/homebrew.elf', async (c) => {
     return c.redirect("https://github.com/LightningMods/PS4-Store/releases/latest/download/homebrew.elf")
@@ -26,11 +30,19 @@ app.get('/update/remote.md5', async (c) => {
 app.use('/images/*', serveStatic({ root: './' }))
 
 app.get('/api.php', async (c) => {
-    const res = await fetch(`https://store-cdn.repressoh.it/store.db`)
-    const file = await res.text()
+    try {
+        const response = await fetch('https://store-cdn.repressoh.it/store.db');
+        const fileData = await response.arrayBuffer()
+  
+        const hashBuffer = await crypto.subtle.digest('md5', fileData)
+        const hashArray = Array.from(new Uint8Array(hashBuffer))
+        const md5 = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('')
 
-    const hash = await md5(file)
-    return c.json({"hash": hash})
-})
+        return c.json({"hash": md5});
+
+    } catch (error) {
+        return c.json({ error: error.message }, { status: 500 })
+    }
+});
 
 export default app

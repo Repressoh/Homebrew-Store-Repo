@@ -3,9 +3,10 @@ import { serveStatic } from 'hono/cloudflare-workers'
 
 const app = new Hono()
 
-app.get('/store.db', async (c) => {
-    const response = await fetch('https://store-cdn.repressoh.it/store.db');
-    const fileData = await response.arrayBuffer()
+app.get('/store.db', async () => {
+
+    const fileData = await fetch('https://store-cdn.repressoh.it/store.db').then(res => res.arrayBuffer())
+    console.log("lenght in store.db: " + fileData.byteLength)
 
     return new Response(fileData, {
         headers: {
@@ -31,9 +32,11 @@ app.use('/images/*', serveStatic({ root: './' }))
 
 app.get('/api.php', async (c) => {
     try {
-        const response = await fetch('https://store-cdn.repressoh.it/store.db');
-        const fileData = await response.arrayBuffer()
-  
+        const fileData = await fetch('https://store-cdn.repressoh.it/store.db').then(res => res.arrayBuffer())
+
+        console.log("lenght in api.php: " + fileData.byteLength)
+
+
         const hashBuffer = await crypto.subtle.digest('md5', fileData)
         const hashArray = Array.from(new Uint8Array(hashBuffer))
         const md5 = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('')

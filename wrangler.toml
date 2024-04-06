@@ -1,0 +1,11 @@
+name = "homebrew-store-repo"
+compatibility_date = "2022-02-12"
+node_compat = true
+main = "src/index.ts"
+
+[site]
+bucket = "./assets"
+
+[[r2_buckets]]
+binding = 'storage' # <~ valid JavaScript variable name
+bucket_name = 'store'

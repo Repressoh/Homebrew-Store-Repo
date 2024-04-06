@@ -14,7 +14,7 @@ It's pretty easy!
 
 - First of all, fork the repository
 
-- Open the actions tab and click "Allow Workflow Runs"
+- Open the actions tab and click "I understand my workflows, go ahead and enable them""
 
 - Go in your new Repository settings and in "Pages", put your custom domain ( or leave the free one )
 

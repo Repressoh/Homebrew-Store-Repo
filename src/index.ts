@@ -1,5 +1,4 @@
 import { Hono } from 'hono'
-import { serveStatic } from 'hono/cloudflare-workers'
 
 const app = new Hono()
 
@@ -26,8 +25,6 @@ app.get('/update/homebrew.elf.sig', async (c) => {
 app.get('/update/remote.md5', async (c) => {
     return c.redirect("https://github.com/LightningMods/PS4-Store/releases/latest/download/remote.md5")
 })
-
-app.use('/images/*', serveStatic({ root: './' }))
 
 app.get('/api.php', async (c) => {
     try {

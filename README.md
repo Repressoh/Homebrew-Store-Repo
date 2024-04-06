@@ -40,7 +40,7 @@ npm run deploy
 
 Remember that you still have to host your .pkg file. If it's under 2gb, you can store it on GitHub
 
-Tip: Cloudflare has a service called Cloudflare R2 that allows you to up to 5gb for free!
+Tip: Cloudflare has a service called Cloudflare R2 that allows you to store up to 5gb for free!
 
 # Disclaimer
 

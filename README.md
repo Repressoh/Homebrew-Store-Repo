@@ -1,4 +1,4 @@
-# The Homebrew-Store-Repo  [![wakatime](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7.svg)](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7)
+# The Homebrew-Store-Repo  [![wakatime](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7.svg)](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7) [![codeQL](https://github.com/Repressoh/Homebrew-Store-Repo/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Repressoh/Homebrew-Store-Repo) 
 Create your Own Homebrew Store Content Delivery Network easily and for free. 
 
 # Why?

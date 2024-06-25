@@ -4,7 +4,7 @@
   "description": " Create your Own Homebrew Store repo",
   "main": "src/index.ts",
   "dependencies": {
-    "hono": "^4.4.7"
+    "hono": "^4.4.8"
   },
   "devDependencies": {
     "wrangler": "^3.61.0"

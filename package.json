@@ -7,7 +7,7 @@
     "hono": "^4.6.6"
   },
   "devDependencies": {
-    "wrangler": "^3.82.0"
+    "wrangler": "^3.84.0"
   },
   "browser": {
     "crypto": false,

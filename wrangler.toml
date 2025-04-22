@@ -4,9 +4,6 @@ node_compat = true
 main = "src/index.ts"
 minify = true
 
-[limits]
-cpu_ms = 10
-
 [placement]
 mode = "smart"
 

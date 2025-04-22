@@ -14,5 +14,5 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          quiet: false
+          quiet: true
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

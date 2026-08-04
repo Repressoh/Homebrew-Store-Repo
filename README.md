@@ -3,7 +3,7 @@ Create your Own Homebrew Store Content Delivery Network easily and for free.
 
 # Why?
 
-I decided to create this tool after I decided to host my own repository of the Homebrew Store for PS4 and I only found a desktop app for that. I wanted something more scalable instead.
+I created this tool after I decided to host my own repository for the Homebrew Store and I only found a desktop app for that. I wanted something more scalable instead.
 
 This was a good opportunity to learn more about the PS4 file system and provide a useful tool for everybody.
 

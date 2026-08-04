@@ -1,9 +1,9 @@
-# The Homebrew-Store-Repo  [![wakatime](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7.svg)](https://wakatime.com/badge/user/018e969e-62ae-4c81-931e-918f7c7b7d66/project/018eaf5e-488d-45fa-8749-0da69c601ad7) [![codeQL](https://github.com/Repressoh/Homebrew-Store-Repo/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Repressoh/Homebrew-Store-Repo) [![DeepScan grade](https://deepscan.io/api/teams/24039/projects/27280/branches/870736/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=24039&pid=27280&bid=870736)
+# The Homebrew-Store-Repo [![codeQL](https://github.com/Repressoh/Homebrew-Store-Repo/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Repressoh/Homebrew-Store-Repo)
 Create your Own Homebrew Store Content Delivery Network easily and for free. 
 
 # Why?
 
-I decided to create this tool after I wanted to host my own repository of the Homebrew Store for PS4 and I only found a desktop app for that. I wanted something more scalable instead.
+I decided to create this tool after I decided to host my own repository of the Homebrew Store for PS4 and I only found a desktop app for that. I wanted something more scalable instead.
 
 This was a good opportunity to learn more about the PS4 file system and provide a useful tool for everybody.
 
